@@ -30,7 +30,7 @@ RUN cmake3 -DENABLE_GRGSM_LIVEMON=OFF .. && \
         # The parallel build sometimes fails when the .grc_gnuradio
         # and .gnuradio directories do not exist
         mkdir $HOME/.grc_gnuradio/ $HOME/.gnuradio/ && \
-        make && \
+        make VERBOSE=1 && \
         make install && \
         ldconfig && \
         make test
